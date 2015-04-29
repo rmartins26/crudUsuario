@@ -47,22 +47,26 @@ public class MainActivity extends Activity implements OnClickListener {
 
 		switch (v.getId()) {
 		case R.id.btnAlterar:
+			System.out.println("Passou alterar");
 			intent = new Intent(this, AlteraUsuarioActivity.class);
 			startActivity(intent);
 			break;
 
 		case R.id.btnIncluir:
+			System.out.println("Passou incluir");
 			intent = new Intent(this, InsereUsuarioActivity.class);
 			startActivity(intent);
 			break;
 
 		case R.id.btnSelecionar:
+			System.out.println("Passou selecionar");
 			intent = new Intent(this, SelecionaUsuarioActivity.class);
 			startActivity(intent);
 			break;
 			
 		case R.id.btnFecha:
-			super.closeContextMenu();
+			System.out.println("Passou no fechar...");
+		    this.onDestroy();
 			break;
 
 		}
